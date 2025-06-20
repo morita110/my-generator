@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+html.fonts-loading body {
+  opacity: 0;
+}
+html.fonts-loaded body {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffbe6;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(245, 193, 135, 0.4), /* 横ストライプ：薄め */
+      rgba(245, 193, 135, 0.4) 10px,
+      transparent 10px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(245, 193, 135, 0.4), /* 縦ストライプ：薄め */
+      rgba(245, 193, 135, 0.4) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: black;
+}
+
+h1{
+  margin: 0;
+  font-family: 'Kiwi Maru',serif;
+}
+
+.binder-wrapper h1 {
+  font-size: clamp(14px, 3.6vw, 24px);
+}
+
+.binder-wrapper h2 {
+  font-size: clamp(12px, 2.7vw, 17px);
+}
+
+.binder-wrapper p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: clamp(10px, 2.6vw, 17px);
+}
+
+.binder-wrapper {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('background-img.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.binder-content {
+  position: absolute;
+  top: 98px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.7);
+  opacity: 0.7;
+  border-radius: 12px;
+  height: 68%;
+}
+input[type="number"] {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 80px;
+  margin: 8px 0;
+  background-color: #fffdf8;
+}
+
+button {
+  background-color: #f5c187;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #e2a663;
+}
+
+.binder-content p {
+  margin-top: 16px;
+  font-weight: bold;
+  background-color: #fff3e6;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px dashed #f5c187;
+}
+
+
+@media screen and (max-width: 599px) {
+  .binder-content{
+    top: 139px;
+    height: 53%;
+  }
+  body > div > div > h2:nth-child(4) {
+    margin: 0;
+  }
+  body > div > div > h2:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+} 
